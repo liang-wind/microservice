@@ -1,0 +1,13 @@
+server:
+  port: 8081
+eureka:
+  instance:
+    hostnmae: springcloud-server
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone:  http://${server.port}/eureka/
+  server:
+    enable-self-preservation: false

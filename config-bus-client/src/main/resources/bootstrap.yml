@@ -1,0 +1,18 @@
+server:
+  port: 8302
+spring:
+  application:
+    name: config-bus-client
+  cloud:
+    config:
+      name: config-yml
+      profile: dev
+      uri: http://localhost:8301
+      discovery:
+        enabled: true
+        service-id: config-bus-server
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/

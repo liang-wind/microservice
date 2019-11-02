@@ -1,0 +1,19 @@
+server:
+  port: 8301
+spring:
+  application:
+    name: config-bus-server
+  cloud:
+    config:
+      server:
+        #git 地址配置
+        git:
+          uri: https://github.com/liang-wind/microservice
+          search-paths: config-bus-client/src/main/resources
+          username: liang-wind
+          password: liang6015
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
